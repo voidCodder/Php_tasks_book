@@ -23,12 +23,12 @@ include_once '../php/sortItems.php';
 
 <body>
 
-	<div class="container-lg header-wrapper">
+	<div class="container header-wrapper">
 
 		<div class="row">
 			<!-- Dropdown -->
-			<div class="dropdown col">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<div class="dropdown col-2">
+				<button class="btn btn-secondary dropdown-toggle btn_shadow" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Sort by
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -39,9 +39,9 @@ include_once '../php/sortItems.php';
 			</div>
 
 			<!-- Create task panel -->
-			<div class="col">
+			<div class="col text-center">
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CreateTaskPanel">
+				<button type="button" class="btn btn-primary btn_shadow" data-toggle="modal" data-target="#CreateTaskPanel">
 					Add task
 				</button>
 				<!-- Modal -->
@@ -80,9 +80,9 @@ include_once '../php/sortItems.php';
 			</div>
 
 			<!-- Admin Panel -->
-			<div class="col">
+			<div class="col-2">
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalAdminPanel">
+				<button type="button" class="btn btn-primary btn_shadow" data-toggle="modal" data-target="#ModalAdminPanel">
 					Login
 				</button>
 				<!-- Modal -->
@@ -127,7 +127,7 @@ include_once '../php/sortItems.php';
 
 	</div>
 			
-	<div class="container-lg">
+	<div class="container">
 
 		<? foreach ($tasks as $key => $task): ?>
 
@@ -149,7 +149,7 @@ include_once '../php/sortItems.php';
 				</div>
 
 				<? if($_SESSION['status'] == 1) { ?>
-				<div class="task-buttons-wrapper col-2">
+				<div class="task-buttons-wrapper col-md-2">
 					<button type="button" class="btn btn-outline-primary task-buttons__button_fit" 
 					data-id="<?=$task["id"]?>" 
 					data-event-edit>Edit</button>
@@ -177,7 +177,7 @@ include_once '../php/sortItems.php';
 
 	</div>
 
-	<footer class="container-lg">
+	<footer class="container">
 		<nav aria-label="Page navigation">
 			<ul class="pagination">
 				<li class="page-item <? if($active == 1) echo "disabled" ?> ">
